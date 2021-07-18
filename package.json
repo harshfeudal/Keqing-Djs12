@@ -4,6 +4,9 @@
   "description": "<!--lint disable no-literal-urls-->\r <p align=\"center\">\r   <a href=\"https://nodejs.org/\">\r     <img\r       alt=\"Node.js\"\r       src=\"https://nodejs.org/static/images/logo-light.svg\"\r       width=\"400\"\r     />\r   </a>\r </p>",
   "main": "main keqing.js",
   "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "ms": "^2.1.3",
     "npm": "^6.14.13"
   },
   "devDependencies": {},
