@@ -46,6 +46,8 @@ client.on('message', message =>{
         client.commands.get('roll').execute(message, args);
     } else if (command === 'msgclr'){
         client.commands.get('msgclr').execute(message, args);
+    } else if (command === 'rules'){
+        client.commands.get('rules').execute(message, args);
     }
 });
 
