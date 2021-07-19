@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 module.exports = {
     name: 'rules',
     description: "automate rules bot",
-    async execute (bot, message, args) {
+    async execute(message, args) {
         
         const BotRules = new Discord.MessageEmbed()
         .setColor(0x85FFF2)
