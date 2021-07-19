@@ -62,6 +62,6 @@ module.exports = {
         > https://discord.gg/WQ2sZK4Cwr
         > 
         > Team contact email:
-        > *teamaddiction2021@gmail.com*`);
+        > *teamaddiction2021@gmail.com*`, {split: true});
     }
 }
