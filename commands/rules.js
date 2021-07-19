@@ -67,8 +67,31 @@ module.exports = {
         Team contact email:
         *teamaddiction2021@gmail.com*`)
 
+        const embed4 = new Discord.MessageEmbed()
+        .setColor('#85FFF2')
+        .setDescription(`**So these are the rules in this chat:**
+        1. Try to contribute to the conversation! Spamming is not allowed.
+        
+        2. Do not start or partake in drama. This includes vocalizing an opinion that insults others or is controversial and raiding other servers. 
+        
+        3. Do not annoy or harass other members. That includes advertising, tagging randomly, impersonating others, and just trolling in general. Naturally, terms that insult a race, disability, sexual orientation, or nationality are prohibited. Revealing someone else's info without consent or pressuring them into doing so counts as harassment. Let's make this a nice server for @everyone.
+        
+        4. Do not post or talk about NSFW content, such as sexual acts, drugs, and human indecencies. Debating over these things is still talking about them! 
+        
+        5. Do not harm the Geometry Dash community or cheat to gain a statistical advantage. If you are affiliated with trolling in comments, botting likes, or hacking others, you will be banned immediately.
+        
+        6. Do not use channels for anything other than their intended purposes. For example, sending bot commands in any of the general chats is not allowed. English is the language to use if not stated otherwise.
+        
+        7. Do not try to bypass any of the rules. This includes leaving and rejoining the server to remove a warn, and using an alternate account after being banned.
+        
+        8. Use this icon to chat :harshfeudal: if you want to tag me or suggest to me
+        
+        9. Don’t be a liar or else you will be kicked. If your lie not too serious, you will have a possible mute time.`)
+
         message.channel.send(embed1);
         message.channel.send(embed2);
         message.channel.send(embed3);
+        message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
+        message.channel.send(embed4);
     }
 }
