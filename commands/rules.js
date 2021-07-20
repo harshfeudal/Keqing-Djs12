@@ -70,7 +70,7 @@ module.exports = {
     Team contact email:
     *teamaddiction2021@gmail.com*`)
 
-        const embed5 = new Discord.MessageEmbed()
+        const embed4 = new Discord.MessageEmbed()
         .setColor('#85FFF2')
         .setDescription(`**So these are the rules in this chat:**
     1. Try to contribute to the conversation! Spamming is not allowed.
@@ -94,7 +94,7 @@ module.exports = {
     **Breaking the Discord Terms of Service will result in a ban without warning. You can appeal a ban by sending a direct message to an <@&854767607193403463>. Based on the severity and time of your infractions, we will decide whether you will be unbanned or not.
     **`)
 
-    const embed4 = new Discord.MessageEmbed()
+    const embed5 = new Discord.MessageEmbed()
     .setColor('#85FFF2')
     .setDescription(`**__Please note:__** To welcome this chat, type *k?verify* at <#863457112276336670> so as to have a role and unlock the channel!
 
