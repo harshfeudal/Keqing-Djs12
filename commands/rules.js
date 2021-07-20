@@ -46,7 +46,7 @@ module.exports = {
         
     <#841705846706405406> is the place you can suggest for me to do my future stream.
         
-    In **News Category**: you can see GD News at there; and we have divided for you into 4 separate channels so as to easy to look up: #gd-daily-weekly-level , #gd-level-rate , #gd-mods and #gd-news . Also, I have #internal-announcements is the place where I announced in this server only.
+    In **News Category**: you can see GD News at there; and we have divided for you into 4 separate channels so as to easy to look up: <#853942983472316426> , <#853981460046544896> , <#853981880407949336> and <#853998496781041714> . Also, I have <#850235991356735518> is the place where I announced in this server only.
         
     In Collaboration Category: Read carefully the #team-rules and my request and tag me to join.`)
 
