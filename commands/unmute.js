@@ -3,6 +3,9 @@ module.exports = {
     description: "Keqing will unmute member the has mentioned",
     execute(message, args){
         const target = message.mentions.users.first();
+
+        if (message.member.roles.cache.has('854767607193403463')){
+
         if(target){
             let mainRole = message.guild.roles.cache.find(role => role.name === 'member');
             let muteRole = message.guild.roles.cache.find(role => role.name === 'mute');
@@ -14,6 +17,9 @@ module.exports = {
             message.channel.send(`Keqing has unmuted <@${memberTarget.user.id}> :)`);
         } else {
             message.channel.send('Keqing could not unmute that member lmao :(');
+            }
+        } else {
+            message.channel.send('You cannot tell me to do that :(');
         }
     }
 }
