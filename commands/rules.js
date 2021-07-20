@@ -94,11 +94,19 @@ module.exports = {
     **Breaking the Discord Terms of Service will result in a ban without warning. You can appeal a ban by sending a direct message to an <@&854767607193403463>. Based on the severity and time of your infractions, we will decide whether you will be unbanned or not.
     **`)
 
+    const embed4 = new Discord.MessageEmbed()
+    .setColor('#85FFF2')
+    .setDescription(`**__Please note:__** To welcome this chat, type *k?verify* at <#863457112276336670> so as to have a role and unlock the channel!
+
+    **React your role without a game may cannot show your right channel for you to get in; react with the flag so as to go inside your correct general, so don't forget to react twice! General English may set as default if you neither react the flag nor the game.**`)
+
         message.channel.send(embed1);
         message.channel.send(embed2);
         message.channel.send(embed3);
         message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
         message.channel.send(embed4);
+        message.channel.send(embed5)
+        message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/865615154749898772/image0.gif')
         } else {
             message.channel.send('You cannot tell me to do that :(');
         }
