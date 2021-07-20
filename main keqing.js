@@ -22,34 +22,20 @@ client.on('ready', () => {
 	console.log(`${client.user.tag} is online :)`);
 });
 
+message.content.replace(prefix, '').split(' ')
+
 client.on('message', message =>{
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(!message.content.toLowerCase().startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
+    const commandName = args.shift().toLowerCase();
 
-    if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
-    } else if (command === 'yt'){
-        client.commands.get('yt').execute(message, args);
-    } else if (command === 'verify'){
-        client.commands.get('verify').execute(message, args);
-    } else if (command === 'mute'){
-        client.commands.get('mute').execute(message, args);
-    } else if (command === 'unmute'){
-        client.commands.get('unmute').execute(message, args);
-    } else if (command === 'ban'){
-        client.commands.get('ban').execute(message, args);
-    } else if (command === 'kick'){
-        client.commands.get('kick').execute(message, args);
-    } else if (command === 'roll'){
-        client.commands.get('roll').execute(message, args);
-    } else if (command === 'msgclr'){
-        client.commands.get('msgclr').execute(message, args);
-    } else if (command === 'rules'){
-        client.commands.get('rules').execute(message, args);
-    }
+    const command = client.commands.get(commandName)
+    if (!command) return message.channel.send('I dont know what you want to tell me something :(');
+    command.execute(message, args);
 });
+
+
 
 const http = require('http');
 const server = http.createServer((req, res) => {
