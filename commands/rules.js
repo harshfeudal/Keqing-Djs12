@@ -91,7 +91,7 @@ module.exports = {
         
     9. Don’t be a liar or else you will be kicked. If your lie not too serious, you will have a possible mute time.
     
-    **Breaking the Discord Terms of Service will result in a ban without warning. You can appeal a ban by sending a direct message to an <@854767607193403463>. Based on the severity and time of your infractions, we will decide whether you will be unbanned or not.
+    **Breaking the Discord Terms of Service will result in a ban without warning. You can appeal a ban by sending a direct message to an <@&854767607193403463>. Based on the severity and time of your infractions, we will decide whether you will be unbanned or not.
     **`)
 
         message.channel.send(embed1);
