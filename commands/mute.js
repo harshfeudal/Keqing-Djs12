@@ -3,6 +3,14 @@ module.exports = {
     name: 'mute',
     description: "Keqing will mute member the has mentioned",
     execute(message, args){
+        try{
+            ms(args[1]);
+
+        } catch (error){
+            message.channel.send('I dont know what you mean');
+            return
+        }
+
         const target = message.mentions.users.first();
 
         if (message.member.roles.cache.has('854767607193403463')){
