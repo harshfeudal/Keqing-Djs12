@@ -70,7 +70,7 @@ module.exports = {
     Team contact email:
     *teamaddiction2021@gmail.com*`)
 
-        const embed4 = new Discord.MessageEmbed()
+        const embed5 = new Discord.MessageEmbed()
         .setColor('#85FFF2')
         .setDescription(`**So these are the rules in this chat:**
     1. Try to contribute to the conversation! Spamming is not allowed.
