@@ -48,7 +48,7 @@ module.exports = {
         
     In **News Category**: you can see GD News at there; and we have divided for you into 4 separate channels so as to easy to look up: <#853942983472316426> , <#853981460046544896> , <#853981880407949336> and <#853998496781041714> . Also, I have <#850235991356735518> is the place where I announced in this server only.
         
-    In Collaboration Category: Read carefully the #team-rules and my request and tag me to join.`)
+    In Collaboration Category: Read carefully the <#851888900091674684> and my request and tag me to join.`)
 
         const embed3 = new Discord.MessageEmbed()
         .setColor('#85FFF2')
