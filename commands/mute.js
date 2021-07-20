@@ -3,10 +3,7 @@ module.exports = {
     name: 'mute',
     description: "Keqing will mute member the has mentioned",
     execute(message, args){
-            ms(args[1]).catch(error => {
-                message.channel.send('I dont know what you mean :(');
-                return
-            })
+            if(!ms(args[1])) return message.channel.send('I dont know what you mean :(');
 
         const target = message.mentions.users.first();
 
