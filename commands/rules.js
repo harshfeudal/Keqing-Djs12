@@ -87,7 +87,7 @@ module.exports = {
         
     7. Do not try to bypass any of the rules. This includes leaving and rejoining the server to remove a warn, and using an alternate account after being banned.
         
-    8. Use this icon to chat :harshfeudal: if you want to tag me or suggest to me
+    8. Use this icon to chat <:harshfeudal:848815852886949908> if you want to tag me or suggest to me
         
     9. Don’t be a liar or else you will be kicked. If your lie not too serious, you will have a possible mute time.
     
