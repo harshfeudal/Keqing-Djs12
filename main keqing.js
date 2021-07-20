@@ -22,11 +22,9 @@ client.on('ready', () => {
 	console.log(`${client.user.tag} is online :)`);
 });
 
-message.content.replace(prefix, '').split(' ')
-
 client.on('message', message =>{
     if(!message.content.toLowerCase().startsWith(prefix) || message.author.bot) return;
-
+    message.content.replace(prefix, '').split(' ');
     const args = message.content.slice(prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
 
@@ -34,8 +32,6 @@ client.on('message', message =>{
     if (!command) return message.channel.send('I dont know what you want to tell me something :(');
     command.execute(message, args);
 });
-
-
 
 const http = require('http');
 const server = http.createServer((req, res) => {
