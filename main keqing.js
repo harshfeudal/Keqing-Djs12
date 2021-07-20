@@ -19,7 +19,7 @@ for(const file of commandFiles){
 
 
 client.on('ready', () => {
-    client.user.setPresence({ activity: { name: 'Watching my husband <3' }, status: 'dnd' });
+    client.user.setPresence({ activity: { name: 'Watching my husband Harshfeudal fixing me. Call me by using [k?] <3' }, status: 'dnd' });
 	console.log(`${client.user.tag} is online :)`);
 });
 
