@@ -34,19 +34,19 @@ This group may be separated into 2 teams:
 **~~~~~~~~~~~~~~~~~~~~~**
 **FOR GAMEPLAY TEAM**
 
-- Will have a role to come in ( <@851894856975384637> ). 
+- Will have a role to come in ( <@&851894856975384637> ). 
 - Make a fun gameplay so as to let the level more epic!
 
 **~~~~~~~~~~~~~~~~~~~~~**
 **FOR DECORATION TEAM**
 
-- Will have a role to come in ( <@851895577813188669> ). 
-- All of my suggestion for <@851895577813188669> : drawing anime, blocks decoration quite more like Sami’s style or CitraX’s style. Other famous creator styles can be accepted too. 
+- Will have a role to come in ( <@&851895577813188669> ). 
+- All of my suggestion for <@&851895577813188669> : drawing anime, blocks decoration quite more like Sami’s style or CitraX’s style. Other famous creator styles can be accepted too. 
 
 **--------------------------------------**
 **How to join in here:** Go to <#860125059057319966> so as to collaborate with me in this Team Addiction!
 
-Moreover, I have created a <@860895503398862879> role, which is help me verify some of level that the team can't verify it, or to verify extreme demon level in our team. To enroll in it, I need you to list some extreme demon levels that you **have beaten it completely with no hack**, and at least 2 extreme demon levels you have won.
+Moreover, I have created a <@&860895503398862879> role, which is help me verify some of level that the team can't verify it, or to verify extreme demon level in our team. To enroll in it, I need you to list some extreme demon levels that you **have beaten it completely with no hack**, and at least 2 extreme demon levels you have won.
 
 **Before you write an application**
 1. Please write in formal way. 
