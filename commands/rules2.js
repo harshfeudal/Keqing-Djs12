@@ -57,6 +57,8 @@ Moreover, I have created a <@860895503398862879> role, which is help me verify s
 **Any question?** Contact with us by email: teamaddiction2021@gmail.com
 
 Have fun and try your best!`)
+
+    message.channel.send(embed1);
         }
     }
 }
