@@ -5,7 +5,7 @@ module.exports = {
         if (message.member.roles.cache.has('863443533000081418')){
             message.channel.send('You have already verified.');
         } else {
-            message.channel.send('You has verified in this server! Enjoy :)');
+            message.channel.send('You have verified in this server! Enjoy :)');
             message.member.roles.add('846426312661925899');
             message.member.roles.add('863443533000081418');
         }
