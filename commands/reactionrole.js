@@ -25,7 +25,7 @@ module.exports = {
             + `${vietnamEmoji} for Spanish people\n`
         );
 
-        let messageEmbed = await nessage.channel.send(embed);
+        let messageEmbed = await message.channel.send(embed);
         messageEmbed.react(russiaEmoji);
         messageEmbed.react(spanishEmoji);
         messageEmbed.react(englishEmoji);
