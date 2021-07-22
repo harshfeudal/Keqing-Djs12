@@ -8,7 +8,7 @@ module.exports = {
         
         if (message.member.roles.cache.has('846425937276305458')){
         
-        message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
+        message.channel.send('https://cdn.discordapp.com/attachments/850784210976505917/859475734656843776/level_perks_banner___aurora_by_narkofficial_decht8v-pre.png')
         const embed1 = new Discord.MessageEmbed()
         .setColor('#85FFF2')
         .setDescription(`**Level Information**
