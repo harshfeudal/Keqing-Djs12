@@ -2,7 +2,7 @@ const pagination = require('discord.js-pagination');
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'rules2',
+    name: 'rules3',
     description: "automate rules bot",
     async execute(message, args) {
         
