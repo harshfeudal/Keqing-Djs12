@@ -12,7 +12,7 @@ module.exports = {
             if(args[0] < 1) return message.reply("Keqing can delete at least 1 message :)");
 
             await message.channel.messages.fetch({limit: args[0]}).then(messages =>{
-            message.channel.bulkDelete(messages);
+            message.channel.bulkDelete(messages, true);
             });
         } else {
             message.channel.send('You cannot tell me to do that :(');
