@@ -18,7 +18,7 @@ The Node.js project uses an [open governance model](./GOVERNANCE.md). The
 
 **This project is bound by a [Code of Conduct][].**
 
-# Table of contents.
+# Table of contents
 
 * [Support](#support)
 * [Release types](#release-types)
