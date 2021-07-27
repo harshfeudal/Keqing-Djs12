@@ -1,17 +1,13 @@
-const pagination = require('discord.js-pagination');
-const Discord = require('discord.js');
+const Discord = require('discord.js')
 
 module.exports = {
-    name: 'rules2',
-    description: "automate rules bot",
-    async execute(message, args) {
-        
-        if (message.member.roles.cache.has('846425937276305458')){
-        
-        message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
-        const embed1 = new Discord.MessageEmbed()
-        .setColor('#85FFF2')
-        .setDescription(`**Welcome to my GD Collaboration Team!**
+	description: 'automate rules bot',
+	async run (message, args) {
+		if (message.member.roles.cache.has('846425937276305458')) {
+			message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
+			const embed1 = new Discord.MessageEmbed()
+				.setColor('#85FFF2')
+				.setDescription(`**Welcome to my GD Collaboration Team!**
 
 __Team name:__ Team Addiction.
         
@@ -58,7 +54,7 @@ Moreover, I have created a <@&860895503398862879> role, which is help me verify 
 
 Have fun and try your best!`)
 
-    message.channel.send(embed1);
-        }
-    }
+			message.channel.send(embed1)
+		}
+	}
 }

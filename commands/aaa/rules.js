@@ -1,17 +1,13 @@
-const pagination = require('discord.js-pagination');
-const Discord = require('discord.js');
+const Discord = require('discord.js')
 
 module.exports = {
-    name: 'rules',
-    description: "automate rules bot",
-    async execute(message, args) {
-        
-        if (message.member.roles.cache.has('846425937276305458')){
-        
-        message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118056537161748/HV7xOwu.gif')
-        const embed1 = new Discord.MessageEmbed()
-        .setColor('#85FFF2')
-        .setDescription(`**Welcome to Harshfeudal Discord server!**
+	description: 'automate rules bot',
+	async run (message, args) {
+		if (message.member.roles.cache.has('846425937276305458')) {
+			message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118056537161748/HV7xOwu.gif')
+			const embed1 = new Discord.MessageEmbed()
+				.setColor('#85FFF2')
+				.setDescription(`**Welcome to Harshfeudal Discord server!**
 
 This is my YouTube channel:
 <:harshfeudal:848815852886949908> https://www.youtube.com/c/Harshfeudal
@@ -22,9 +18,9 @@ First of all, you need to verify your Discord account to make sure that you are 
     
 <:NitroBoost:854707844930994226> No need to registered Discord Nitro, but if you have it, it would be a great appreciate.`)
 
-        const embed2 = new Discord.MessageEmbed()
-        .setColor('#85FFF2')
-        .setDescription(`**———————————————**
+			const embed2 = new Discord.MessageEmbed()
+				.setColor('#85FFF2')
+				.setDescription(`**———————————————**
 __**SERVER INFORMATION**__
 <:harshfeudal:848815852886949908> We have lots of channels and categories, and I will presented for you to know where and how these channels work. 
 
@@ -50,9 +46,9 @@ In **News Category**: you can see GD News at there; and we have divided for you 
     
 In Collaboration Category: Read carefully the <#851888900091674684> and my request and tag me to join.`)
 
-        const embed3 = new Discord.MessageEmbed()
-        .setColor('#85FFF2')
-        .setDescription(`**———————————————**
+			const embed3 = new Discord.MessageEmbed()
+				.setColor('#85FFF2')
+				.setDescription(`**———————————————**
 __**ADMIN INFORMATION:**__
 <@622450109317251088>: Owner
     
@@ -70,9 +66,9 @@ https://discord.gg/WQ2sZK4Cwr
 Team contact email:
 *teamaddiction2021@gmail.com*`)
 
-        const embed4 = new Discord.MessageEmbed()
-        .setColor('#85FFF2')
-        .setDescription(`**So these are the rules in this chat:**
+			const embed4 = new Discord.MessageEmbed()
+				.setColor('#85FFF2')
+				.setDescription(`**So these are the rules in this chat:**
 1. Try to contribute to the conversation! Spamming is not allowed.
     
 2. Do not start or partake in drama. This includes vocalizing an opinion that insults others or is controversial and raiding other servers. 
@@ -94,21 +90,21 @@ Team contact email:
 **Breaking the Discord Terms of Service will result in a ban without warning. You can appeal a ban by sending a direct message to an <@&854767607193403463>. Based on the severity and time of your infractions, we will decide whether you will be unbanned or not.
 **`)
 
-    const embed5 = new Discord.MessageEmbed()
-    .setColor('#85FFF2')
-    .setDescription(`**__Please note:__** To welcome this chat, type *k?verify* at <#863457112276336670> so as to have a role and unlock the channel!
+			const embed5 = new Discord.MessageEmbed()
+				.setColor('#85FFF2')
+				.setDescription(`**__Please note:__** To welcome this chat, type *k?verify* at <#863457112276336670> so as to have a role and unlock the channel!
 
     **React your role without a game may cannot show your right channel for you to get in; react with the flag so as to go inside your correct general, so don't forget to react twice! General English may set as default if you neither react the flag nor the game.**`)
 
-        message.channel.send(embed1);
-        message.channel.send(embed2);
-        message.channel.send(embed3);
-        message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png');
-        message.channel.send(embed4);
-        message.channel.send(embed5);
-        message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/865615154749898772/image0.gif');
-        } else {
-            message.channel.send('You cannot tell me to do that :(');
-        }
-    }
+			message.channel.send(embed1)
+			message.channel.send(embed2)
+			message.channel.send(embed3)
+			message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
+			message.channel.send(embed4)
+			message.channel.send(embed5)
+			message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/865615154749898772/image0.gif')
+		} else {
+			message.channel.send('You cannot tell me to do that :(')
+		}
+	}
 }

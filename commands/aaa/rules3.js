@@ -1,17 +1,13 @@
-const pagination = require('discord.js-pagination');
-const Discord = require('discord.js');
+const Discord = require('discord.js')
 
 module.exports = {
-    name: 'rules3',
-    description: "automate rules bot",
-    async execute(message, args) {
-        
-        if (message.member.roles.cache.has('846425937276305458')){
-        
-        message.channel.send('https://cdn.discordapp.com/attachments/850784210976505917/859475734656843776/level_perks_banner___aurora_by_narkofficial_decht8v-pre.png')
-        const embed1 = new Discord.MessageEmbed()
-        .setColor('#85FFF2')
-        .setDescription(`**Level Information**
+	description: 'automate rules bot',
+	async run (message, args) {
+		if (message.member.roles.cache.has('846425937276305458')) {
+			message.channel.send('https://cdn.discordapp.com/attachments/850784210976505917/859475734656843776/level_perks_banner___aurora_by_narkofficial_decht8v-pre.png')
+			const embed1 = new Discord.MessageEmbed()
+				.setColor('#85FFF2')
+				.setDescription(`**Level Information**
 
 <@&850790258866258000> when members reach at that level (Show in RoboTop notification) - Can access media in General chat. 
 
@@ -43,9 +39,9 @@ module.exports = {
 
 Note: Tell me if you have subscribed me I will give you 10,000XP from the beginning;and if you boost my server, for each boost I will add you 5,000XP. 
 
-Big thanks to <@621844409901776910> , the developer of our server!`);
+Big thanks to <@621844409901776910> , the developer of our server!`)
 
-    message.channel.send(embed1);
-        }
-    }
+			message.channel.send(embed1)
+		}
+	}
 }
