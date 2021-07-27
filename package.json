@@ -2,15 +2,11 @@
   "name": "keqing",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/harshfeudal/Keqing.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "harshfeudal",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/harshfeudal/Keqing/issues"
@@ -20,8 +16,8 @@
     "discord.js": "^12.5.3",
     "discord.js-pagination": "^1.0.3",
     "dotenv": "^10.0.0",
-    "mongoose": "^5.13.3",
-    "ms": "^2.1.2"
+    "ms": "^2.1.2",
+    "standardx": "^7.0.0"
   },
   "description": ""
 }
