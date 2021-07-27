@@ -7,7 +7,7 @@ module.exports = {
       .then(() => message.channel.send(`Successfully make ${message.mentions.members.first().displayName} dead`))
       .catch(error => {
         console.log(error)
-        message.channel.send('An error occurred. Please tell 372005 about this. Error:' + error)
+        message.channel.send('An error occurred. Error:' + error)
       })
   }
 }
