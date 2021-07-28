@@ -1,6 +1,6 @@
 module.exports = {
 	description: 'Hello to Keqing :)',
-	run (message, args) {
+	run (bot, message, args) {
 		message.reply('Hello :) Nice to meet you :)')
 	}
 }
