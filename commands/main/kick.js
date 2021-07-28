@@ -8,7 +8,7 @@ module.exports = {
 			member.kick()
 			message.channel.send('Keqing has kicked that user :( Sorry ;-;')
 		} catch {
-			message.channel.send('Keqing cannot ban that user.')
+			message.channel.send('Keqing cannot kick that user.')
 		}
 	}
 }
