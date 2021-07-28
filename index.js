@@ -4,8 +4,6 @@ const { Client, Collection } = require('discord.js')
 
 const bot = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] })
 
-const { prefix } = require('./config.json')
-
 const fs = require('fs')
 
 bot.commands = new Collection()
@@ -30,8 +28,8 @@ bot.on('ready', () => {
 })
 
 bot.on('message', message => {
-	if (!message.content.toLowerCase().startsWith(prefix) || message.author.bot) return
-	const args = message.content.replace(prefix, '').trim().split(/ +/)
+	if (!message.content.toLowerCase().startsWith(process.env.prefix) || message.author.bot) return
+	const args = message.content.replace(process.env.prefix, '').trim().split(/ +/)
 	const commandName = args.shift().toLowerCase()
 
 	const command = bot.commands.get(commandName)
