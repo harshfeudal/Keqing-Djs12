@@ -29,7 +29,7 @@ bot.on('ready', () => {
 
 bot.on('message', message => {
 	if (!message.content.toLowerCase().startsWith(process.env.prefix) || message.author.bot) return
-	const args = message.content.replace(process.env.prefix, '').trim().split(/ +/)
+	const args = message.content.toLowerCase().replace(process.env.prefix, '').trim().split(/ +/)
 	const commandName = args.shift().toLowerCase()
 
 	const command = bot.commands.get(commandName)
