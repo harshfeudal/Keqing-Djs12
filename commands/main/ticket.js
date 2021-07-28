@@ -1,6 +1,6 @@
 module.exports = {
 	description: 'Ticket with Harshfeudal via Keqing',
-	run (message, args) {
+	run (bot, message, args) {
 		message.channel.send('Nope :)')
 	}
 }

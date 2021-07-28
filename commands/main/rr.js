@@ -3,7 +3,7 @@ const { russia_emoji_name, spanish_emoji_name, english_emoji_name, vietnam_emoji
 
 module.exports = {
 	description: 'Keqing will add a role for who has reacted',
-	async run (message, args) {
+	async run (bot, message, args) {
 		const embed = new Discord.MessageEmbed()
 			.setColor('#85FFF2')
 			.setTitle('Welcome to Geometry Dash hall!')

@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 
 module.exports = {
 	description: 'automate rules bot',
-	async run (message, args) {
+	async run (bot, message, args) {
 		if (message.member.roles.cache.has('846425937276305458')) {
 			message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118056537161748/HV7xOwu.gif')
 			const embed1 = new Discord.MessageEmbed()

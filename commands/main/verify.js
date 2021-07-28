@@ -1,7 +1,7 @@
 const { member_role_id } = require('../../config.json')
 module.exports = {
 	description: 'verify the participant',
-	run (message, args) {
+	run (bot, message, args) {
 		if (message.member.roles.cache.has(member_role_id)) {
 			message.channel.send('You are verified already.')
 		} else {

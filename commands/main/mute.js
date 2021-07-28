@@ -2,7 +2,7 @@ const ms = require('ms')
 const { member_role_id, mute_role_id } = require('../../config.json')
 module.exports = {
 	description: 'Keqing will mute member the has mentioned',
-	run (message, args) {
+	run (bot, message, args) {
 		if (!message.member.hasPermission('')) return message.channel.send('You cannot tell me to do that :(')
 		if (args[1] && !ms(args[1])) return message.channel.send('I dont know what you mean :( (Invalid duration)')
 

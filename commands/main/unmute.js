@@ -1,7 +1,7 @@
 const { member_role_id, mute_role_id } = require('../../config.json')
 module.exports = {
 	description: 'Keqing will unmute member the has mentioned',
-	run (message, args) {
+	run (bot, message, args) {
 		if (!message.member.hasPermission('')) return message.channel.send('You cannot tell me to do that :(')
 
 		const member = message.mentions.members.first()
