@@ -1,13 +1,14 @@
 const Discord = require('discord.js')
-
+const { owners } = require('../../config.json')
 module.exports = {
 	description: 'automate rules bot',
 	async run (bot, message, args) {
-		if (message.member.roles.cache.has('846425937276305458')) {
-			message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
-			const embed1 = new Discord.MessageEmbed()
-				.setColor('#85FFF2')
-				.setDescription(`**Welcome to my GD Collaboration Team!**
+		if (!owners.includes(message.author.id)) return message.channel.send('The reload command can only be used by the bot owners')
+
+		message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
+		const embed1 = new Discord.MessageEmbed()
+			.setColor('#85FFF2')
+			.setDescription(`**Welcome to my GD Collaboration Team!**
 
 __Team name:__ Team Addiction.
         
@@ -54,7 +55,6 @@ Moreover, I have created a <@&860895503398862879> role, which is help me verify 
 
 Have fun and try your best!`)
 
-			message.channel.send(embed1)
-		}
+		message.channel.send(embed1)
 	}
 }

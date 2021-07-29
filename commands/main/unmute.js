@@ -5,12 +5,12 @@ module.exports = {
 		if (!message.member.hasPermission('MUTE_MEMBERS')) return message.channel.send('You cannot tell me to do that :(')
 
 		const member = message.mentions.members.first()
-		if (!member) return message.channel.send('You must mention someone to unmute')
+		if (!member) {
+			return message.channel.send(`Muted members (Due to how Harsh implement the temp mute command I cannot show duration/time left until auto unmute):\n${message.guild.roles.cache.get(mute_role_id).members.map(member => `${member.displayName} (${member.user.tag})`).join('\n') || 'None'}`)
+		}
 		try {
-			const member_role = message.guild.roles.cache.get(member_role_id)
-			const mute_role = message.guild.roles.cache.get(mute_role_id)
-			member.roles.add(member_role)
-			member.roles.remove(mute_role)
+			member.roles.add(member_role_id)
+			member.roles.remove(mute_role_id)
 			message.channel.send(`Keqing has unmuted <@${member.user.id}>`)
 		} catch {
 			message.channel.send('Keqing cannot unmute that user.')
