@@ -74,6 +74,7 @@ for (const folder of folders) {
 	for (const file of files) {
 		const command = require(`./commands/${folder}/${file}`)
 		if (!command.name) command.name = file.replace('.js', '')
+		if (!command.group) command.group = folder
 		bot.commands.set(command.name, command)
 	}
 }
