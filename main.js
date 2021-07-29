@@ -82,5 +82,4 @@ bot.db.among_us = bot.db.createModel('among_us')
 bot.db.on('ready', () => console.log('[Database] Connected to 372005 Database!'))
 
 //dashboard
-
 require('./dashboard/server');
