@@ -60,6 +60,7 @@ bot.on('message', message => {
 // Commands Handler
 bot.commands = new Collection()
 const { readdirSync } = require('fs')
+const { Mongoose } = require('mongoose')
 const folders = readdirSync('./commands')
 for (const folder of folders) {
 	const files = readdirSync(`./commands/${folder}`)
@@ -79,3 +80,7 @@ bot.db.among_us = bot.db.createModel('among_us')
 
 // Database Event Handler
 bot.db.on('ready', () => console.log('[Database] Connected to 372005 Database!'))
+
+//dashboard
+
+require('./dashboard/server');
