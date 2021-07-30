@@ -1,11 +1,5 @@
 require('dotenv').config()
 
-// Web Server
-require('http').createServer((req, res) => {
-	res.writeHead(200)
-	res.end('ok')
-}).listen(3000)
-
 // Discord Bot
 const { Client, Collection } = require('discord.js')
 const bot = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] })
@@ -88,3 +82,6 @@ bot.db.among_us = bot.db.createModel('among_us')
 
 // Database Event Handler
 bot.db.on('ready', () => console.log('[Database] Connected to 372005 Database!'))
+
+// Website
+require('./dashboard/index')
