@@ -7,7 +7,6 @@ app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
 	res.status(200)
-	res.render('index')
 	res.send('<h1>Hi!</h1>')
 	res.end()
 })
