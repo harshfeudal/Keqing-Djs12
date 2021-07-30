@@ -1,4 +1,4 @@
-const { member_role_id, mute_role_id } = require('../../config.json')
+const { verify_role_id, mute_role_id } = require('../../config.json')
 module.exports = {
 	description: 'Keqing will unmute member the has mentioned',
 	run (bot, message, args) {
@@ -9,7 +9,7 @@ module.exports = {
 			return message.channel.send(`Muted members (Due to how Harsh implement the temp mute command I cannot show duration/time left until auto unmute):\n${message.guild.roles.cache.get(mute_role_id).members.map(member => `${member.displayName} (${member.user.tag})`).join('\n') || 'None'}`)
 		}
 		try {
-			member.roles.add(member_role_id)
+			member.roles.add(verify_role_id)
 			member.roles.remove(mute_role_id)
 			message.channel.send(`Keqing has unmuted <@${member.user.id}>`)
 		} catch {
