@@ -2,14 +2,16 @@ const express = require('express')
 
 const app = express()
 
-app.set('views', require('path').join(__dirname, '/views'))
-app.set('view engine', 'pug')
+app.set('views', __dirname + '/views');
+app.set('view engine', 'pug');
 
-app.get('/', (req, res) => {
-	res.status(200)
-	res.send('<h1>Hi!</h1>')
-	res.end()
-})
+app.get('/', (req, res) => res.render('index', {
+	something: 'testing 321 123'
+  }));
+
+app.get('/', (req, res) => res.render('index', {
+	subtitle: 'testing 321 123'
+  }));
 
 const port = process.env.PORT || 3000
 app.listen(port, () => console.log(`[Website] Server is live on port ${port}`))
