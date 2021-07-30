@@ -81,7 +81,7 @@ bot.db = new Database(process.env.db)
 bot.db.among_us = bot.db.createModel('among_us')
 
 // Database Event Handler
-bot.db.on('ready', () => console.log('[Database] Connected to 372005 Database!'))
+bot.db.on('ready', () => console.log('[Database] Connected to Harshfeudal Database!'))
 
 // Website
 require('./dashboard/index')
