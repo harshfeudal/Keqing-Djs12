@@ -9,9 +9,9 @@ module.exports = {
 
 			try {
 				member.ban()
-				button.message.edit(`Keqing has banned ${member.user.tag} (${member.user.id}) :( Sorry ;-;`)
+				button.message.edit(`Keqing has banned ${member.user.tag} (${member.user.id}) :( Sorry ;-;`, { components: [] })
 			} catch {
-				button.message.edit('Keqing cannot ban that user.')
+				button.message.edit('Keqing cannot ban that user.', { components: [] })
 			}
 		}
 	}
