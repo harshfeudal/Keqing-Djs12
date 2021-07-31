@@ -4,3 +4,4 @@ module.exports = {
 		message.channel.send('Nope :)')
 	}
 }
+//
