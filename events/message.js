@@ -7,7 +7,7 @@ module.exports = {
 		// Checking Prefix
 		if (!message.content.toLowerCase().startsWith(process.env.prefix)) return
 
-		const args = message.content.slice(process.env.prefix).trim().split(/ +/)
+		const args = message.content.slice(process.env.prefix.length).trim().split(/ +/)
 		const command_name = args.shift().toLowerCase()
 		const command = bot.commands.get(command_name)
 
