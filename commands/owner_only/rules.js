@@ -3,7 +3,7 @@ const { owners } = require('../../config.json')
 module.exports = {
 	description: 'automate rules bot',
 	async run (bot, message, args) {
-		if (!owners.includes(message.author.id)) return message.channel.send('The reload command can only be used by the bot owners')
+		if (!owners.includes(message.author.id)) return message.channel.send(`The ${this.name} command can only be used by the bot owners`)
 		message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118056537161748/HV7xOwu.gif')
 		const embed1 = new Discord.MessageEmbed()
 			.setColor('#85FFF2')

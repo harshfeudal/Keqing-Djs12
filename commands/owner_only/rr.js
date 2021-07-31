@@ -4,7 +4,7 @@ const { owners, russia_emoji_name, spanish_emoji_name, english_emoji_name, vietn
 module.exports = {
 	description: 'Keqing will add a role for who has reacted',
 	async run (bot, message, args) {
-		if (!owners.includes(message.author.id)) return message.channel.send('The reload command can only be used by the bot owners')
+		if (!owners.includes(message.author.id)) return message.channel.send(`The ${this.name} command can only be used by the bot owners`)
 		const embed = new Discord.MessageEmbed()
 			.setColor('#85FFF2')
 			.setTitle('Welcome to Geometry Dash hall!')
