@@ -9,7 +9,7 @@ module.exports = {
 
 		const args = message.content.slice(process.env.prefix.length).trim().split(/ +/)
 		const command_name = args.shift().toLowerCase()
-		const command = bot.commands.get(command_name)
+		const command = bot.commands.get(command_name) || bot.commands.find(_command => _command.aliases && _command.aliases.includes(command_name))
 
 		if (!command) return message.channel.send('Unknown command!')
 
