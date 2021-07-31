@@ -20,7 +20,7 @@ module.exports = {
 		if (command.guild_only && !message.guild) return message.channel.send(`The ${command.name} command must be used in a server channel!`)
 
 		// checking permissions only
-		if (command.permissions) for (const permission of command.permissions) if (!message.member.hasPermission(permission)) return message.channel.send(`You Are Missing The Following Permission: ${command.permissions}!`)
+		if (!owners.includes(message.author.id) && command.permissions) for (const permission of command.permissions) if (!message.member.hasPermission(permission)) return message.channel.send(`You Are Missing The Following Permission: ${command.permissions}!`)
 
 		// checking args
 		if (args.length < command.args) return message.channel.send(`You didn't provide ${args.length ? 'enough' : 'any'} arguments!`)
