@@ -1,9 +1,8 @@
 const { verify_role_id, mute_role_id } = require('../../config.json')
 module.exports = {
+	permissions: ['MUTE_MEMBERS'],
 	description: 'Keqing will unmute member the has mentioned',
 	run (bot, message, args) {
-		if (!message.member.hasPermission('MUTE_MEMBERS')) return message.channel.send('You cannot tell me to do that :(')
-
 		const member = message.mentions.members.first()
 		if (!member) {
 			return message.channel.send(`Muted members (Due to how Harsh implement the temp mute command I cannot show duration/time left until auto unmute):\n${message.guild.roles.cache.get(mute_role_id).members.map(member => `${member.displayName} (${member.user.tag})`).join('\n') || 'None'}`)

@@ -1,7 +1,6 @@
-const { owners } = require('../../config.json')
 module.exports = {
+	owner_only: true,
 	async run (bot, message, args) {
-		if (!owners.includes(message.author.id)) return message.channel.send(`The ${this.name} command can only be used by the bot owners`)
 		if (!args.length) return message.channel.send('You didn\'t provide any arguments')
 		const command_name = args[0].toLowerCase()
 		const command = bot.commands.get(command_name) || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command_name))

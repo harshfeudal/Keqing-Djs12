@@ -1,6 +1,6 @@
 module.exports = {
+	permissions: ['BAN_MEMBERS'],
 	async run (bot, message, args) {
-		if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send('You cannot tell me to do that')
 		let bans = await message.guild.fetchBans()
 		bans = bans.map(ban => `To unban ${ban.user.tag} send k?unban ${ban.user.id}`).join('\n')
 		if (!args.length) return message.channel.send(bans || 'No bans found.')

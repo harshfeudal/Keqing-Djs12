@@ -1,9 +1,8 @@
 const Discord = require('discord.js')
-const { owners } = require('../../config.json')
 module.exports = {
+	owner_only: true,
 	description: 'automate rules bot',
 	async run (bot, message, args) {
-		if (!owners.includes(message.author.id)) return message.channel.send(`The ${this.name} command can only be used by the bot owners`)
 		message.channel.send('https://cdn.discordapp.com/attachments/850784210976505917/859475734656843776/level_perks_banner___aurora_by_narkofficial_decht8v-pre.png')
 		const embed1 = new Discord.MessageEmbed()
 			.setColor('#85FFF2')
