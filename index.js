@@ -2,12 +2,12 @@ require('dotenv').config()
 const { readdirSync } = require('fs')
 const { log } = require('./lib')
 
-// Discord Bot
+// Bot
 const { Client, Collection } = require('discord.js')
 const bot = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] })
 bot.login(process.env.token)
 
-// Discord Bot Events Handler
+// Events
 const files = readdirSync('./events')
 for (const file of files) {
 	const event = require(`./events/${file}`)
@@ -16,7 +16,7 @@ for (const file of files) {
 	else log(1, `[${file}] run () {} missing! The ${file.slice(0, -3)} event will NOT be handled!`)
 }
 
-// Discord Bot Commands Handler
+// Commands
 bot.commands = new Collection()
 const folders = readdirSync('./commands')
 for (const folder of folders) {
@@ -30,15 +30,13 @@ for (const folder of folders) {
 	}
 }
 
-// Discord Buttons
+// Buttons
 const buttons = require('discord-buttons')
 buttons(bot)
 
 // Database
 const { Database } = require('quickmongo')
 bot.db = new Database(process.env.db)
-
-// Database Event Handler
 bot.db.on('ready', () => log(2, '[Database] Connected to Harshfeudal Database!'))
 
 // Website

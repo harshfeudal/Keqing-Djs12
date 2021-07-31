@@ -16,6 +16,6 @@ module.exports = {
 
 		bot.commands.set(new_command.name, new_command)
 
-		message.channel.send('Reloaded command!')
+		message.channel.send(`Reloaded ${command_name} command!`)
 	}
 }

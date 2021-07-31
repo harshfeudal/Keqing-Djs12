@@ -4,7 +4,7 @@ module.exports = {
 	permissions: ['MUTE_MEMBERS'],
 	description: 'Keqing will mute member the has mentioned',
 	run (bot, message, args) {
-		if (args[1] && !ms(args[1])) return message.channel.send('I dont know what you mean :( (Invalid duration)')
+		if (args[1] && !ms(args[1]) && ms(args[1]) !== 0) return message.channel.send('Invalid Mute Duration')
 
 		const member = message.mentions.members.first()
 		if (!member) return message.channel.send('You must mention someone to mute')
