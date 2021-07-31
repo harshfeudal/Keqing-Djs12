@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const { russia_emoji_name, spanish_emoji_name, english_emoji_name, vietnam_emoji_name } = require('../../config.json')
+const { russia_emoji_name, spanish_emoji_name, english_emoji_name, vietnam_emoji_name } = require('../../lib')
 
 module.exports = {
 	owner_only: true,

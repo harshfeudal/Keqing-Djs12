@@ -1,4 +1,4 @@
-const { member_role_id, verify_role_id } = require('../../config.json')
+const { member_role_id, verify_role_id } = require('../../lib')
 module.exports = {
 	description: 'verify the participant',
 	run (bot, message, args) {

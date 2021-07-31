@@ -1,4 +1,4 @@
-const { verify_role_id, mute_role_id } = require('../../config.json')
+const { verify_role_id, mute_role_id } = require('../../lib')
 module.exports = {
 	permissions: ['MUTE_MEMBERS'],
 	description: 'Keqing will unmute member the has mentioned',
