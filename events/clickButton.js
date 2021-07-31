@@ -10,8 +10,9 @@ module.exports = {
 			try {
 				member.ban()
 				button.channel.send(`Keqing has banned ${member.user.tag} (${member.user.id}) :( Sorry ;-;`)
-			} catch {
-				button.channel.send('Keqing cannot ban that user.')
+			} catch (e) {
+				console.log(e)
+				button.channel.send(`Keqing cannot ban ${member.user.tag}`)
 			}
 		}
 	}
