@@ -10,6 +10,6 @@ module.exports = {
 			.setLabel(`Ban ${member.displayName}`)
 			.setStyle('red')
 			.setID(`ban_${message.author.id}_${member}`)
-		)
+		).then(_message => setTimeout(() => _message.edit('Button removed as you did not press it in time.', { components: [] })))
 	}
 }
