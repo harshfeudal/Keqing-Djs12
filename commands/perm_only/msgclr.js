@@ -8,6 +8,6 @@ module.exports = {
 		if (args[0] > 100) return message.reply('Keqing cannot try to delete more than 100 messages ;-;')
 		if (args[0] < 1) return message.reply('Keqing can delete at least 1 message :)')
 
-		message.channel.delete(parseInt(args[0]), true)
+		message.channel.bulkDelete(parseInt(args[0]), true)
 	}
 }
