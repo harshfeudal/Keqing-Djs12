@@ -17,9 +17,11 @@ for (const file of files) {
 }
 
 // Commands
+bot.groups = []
 bot.commands = new Collection()
 const folders = readdirSync('./commands')
 for (const folder of folders) {
+	if (folder !== 'owners_only') bot.groups.push(folder)
 	const files = readdirSync(`./commands/${folder}`)
 	for (const file of files) {
 		const command = require(`./commands/${folder}/${file}`)
