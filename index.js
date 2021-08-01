@@ -37,14 +37,9 @@ const buttons = require('discord-buttons')
 buttons(bot)
 
 // Database
-const { MongoClient } = require('mongodb');
-const uri = (process.env.db);
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+const { Database } = require('quickmongo');
+bot.db = new Database(process.env.db);
+bot.db.on('ready', () => log(2, `[Database] Connected to Harshfeudal's Database`));
 
 
 // Website
