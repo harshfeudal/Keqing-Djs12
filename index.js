@@ -3,7 +3,7 @@ const { readdirSync } = require('fs')
 const { log } = require('./lib')
 
 // Bot
-const { Client, Collection } = require('discord.js')
+const { Client, Collection, TextChannel } = require('discord.js')
 const bot = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] })
 bot.login(process.env.token)
 
@@ -39,7 +39,20 @@ buttons(bot)
 // Database
 const { Database } = require('quickmongo');
 bot.db = new Database(process.env.db);
-bot.db.on('ready', () => log(2, `[Database] Connected to Harshfeudal's Database`)); //no works
+bot.db.on('ready', () => log(2, `[Database] Connected to Harshfeudal's Database`)); 
+
+//Mongoose database
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.db, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+	userFindAndModify: false
+}).then(()=>{
+	console.log(`Connected to Harshfeudal's Database!`);
+}).catch((err) => {
+	
+})
 
 
 // Website
