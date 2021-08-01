@@ -38,7 +38,7 @@ buttons(bot)
 
 // Database
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://harshfeudal:<trungson2005>@cluster0.szzcq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = (process.env.db);
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
