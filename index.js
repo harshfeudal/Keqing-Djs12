@@ -51,7 +51,7 @@ mongoose.connect(process.env.db, {
 }).then(()=>{
 	console.log(`Connected to Harshfeudal's Database!`);
 }).catch((err) => {
-	
+	console.log(err);
 })
 
 
