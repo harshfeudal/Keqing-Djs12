@@ -39,7 +39,7 @@ buttons(bot)
 // Database
 const { Database } = require('quickmongo');
 bot.db = new Database(process.env.db);
-bot.db.on('ready', () => log(2, `[Database] Connected to Harshfeudal's Database`));
+bot.db.on('ready', () => log(2, `[Database] Connected to Harshfeudal's Database`)); //no works
 
 
 // Website
