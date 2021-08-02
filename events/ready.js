@@ -3,7 +3,7 @@ module.exports = {
 	async run (bot) {
 		log(2, `[Bot] Logged in as ${bot.user.tag}!`)
 
-		bot.user.setActivity(process.env.activity)
+		bot.user.setPresence({ activity: { name: 'I love Harshfeudal <3' }, status: 'dnd' });
 
 		const guild = await bot.guilds.fetch(guild_id)
 

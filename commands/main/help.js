@@ -19,7 +19,7 @@ module.exports = {
 		const command = bot.commands.get(command_name) || bot.commands.find(_command => _command.aliases && _command.aliases.includes(command_name))
 
 		if (!command) return message.channel.send('Unknown command!')
-		if (command.group === 'owners_only') return message.channel.send('Unknown command! ||or is it?||')
+		if (command.group === 'owners_only') return message.channel.send('I just let <@622450109317251088> know this only <3')
 
 		embed.setTitle(command.name)
 		if (command.description) embed.setDescription(command.description)
