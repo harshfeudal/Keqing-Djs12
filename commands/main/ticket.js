@@ -1,6 +1,6 @@
 module.exports = {
 	description: 'Ticket with Harshfeudal via Keqing.',
-	run (bot, message, args) {
+	async run (bot, message, args) {
 		let embed = new discord.MessageEmbed()
     .setAuthor(`Welcome to your ticket!`)
     .addField('Here you can:', ':one: Report an issue or bug of the server.\n:two: Suggest any idea for the server.\n:three: Report a staff member of the server.')
