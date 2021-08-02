@@ -16,7 +16,7 @@ let embed2 = new discord.MessageEmbed()
 
 let reactionMessage = null;
 try {
-  reactionMessage = await channel.send(`${message.author}`, {
+  reactionMessage = await message.channel.send(`${message.author}`, {
 embed: embed,
 }).then(message => message.channel.send(embed2));
 } catch (error) {

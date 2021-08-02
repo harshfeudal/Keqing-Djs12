@@ -23,7 +23,7 @@ module.exports = {
 
 			if (user_id !== button.clicker.user.id) return await button.reply.send('You cannot do this', true)
 
-			const member = button.guild.members.fetch(member_id)
+			const member = await button.guild.members.fetch(member_id)
 			try {
 				member.ban()
 				button.channel.send(`Keqing has kick ${member.user.tag} (${member.user.id}) :( Sorry ;-;`)
