@@ -1,3 +1,4 @@
+const discord = require('discord.js')
 module.exports = {
 	description: 'Ticket with Harshfeudal via Keqing.',
 	async run (bot, message, args) {
