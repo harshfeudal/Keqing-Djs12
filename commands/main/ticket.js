@@ -2,77 +2,54 @@ const discord = require('discord.js')
 module.exports = {
 	description: 'Ticket with Harshfeudal via Keqing.',
 	async run (bot, message, args) {
-		let embed = new discord.MessageEmbed()
-    .setAuthor(`Welcome to your ticket!`)
-    .addField('Here you can:', ':one: Report an issue or bug of the server.\n:two: Suggest any idea for the server.\n:three: Report a staff member of the server.')
-    .addField('Make sure to be patient, support will be with you shortly.', `<@&854767607193403463>`)
-    .setColor('#468DFF')
-    .setFooter(`AftNetwork`)
+    const channel = await message.guild.channels.create(`ticket: ${message.author.tag}`);
+    channel.setParent('872132632811540580');
 
-let embed2 = new discord.MessageEmbed()
-    .setAuthor(`React with ⛔ if your issue has been resolved.`)
-    .setColor('#468DFF')
-    .setFooter(`AftNetwork`)
+    channel.updateOverwrite(message.guild.id, {
+      SEND_MESSAGE: false,
+      VIEW_CHANNEL: false,
+    });
+    
+    channel.updateOverwrite(message.author, {
+      SEND_MESSAGE: true,
+      VIEW_CHANNEL: true,
+    });
 
-let reactionMessage = null;
-try {
-  reactionMessage = await message.channel.send(`${message.author}`, {
-embed: embed,
-}).then(message => message.channel.send(embed2));
-} catch (error) {
-  console.log(error);
-  return message.channel.send(
-    '⚠️ Error sending message in ticket channel!',
-  );
-}
+    const reactionMessage = await channel.send("Thanks for contacting support!");
 
-try {
-  await reactionMessage.react('🔒');
-  await reactionMessage.react('⛔');
-} catch (err) {
-  console.log(err);
-  return channel.send('⚠️ Error sending emojis!');
-}
+    try {
 
-const collector = reactionMessage.createReactionCollector(
-  (reaction, user) => {
-    // collect only reactions from the original
-    // author and users w/ admin permissions
-    const isOriginalAuthor = message.author.id === user.id;
-    const isAdmin = message.guild.members.cache
-      .find((member) => member.id === user.id)
-      .hasPermission('MANAGE_MESSAGES');
+      await reactionMessage.react("🔒");
+      await reactionMessage.react("⛔");
 
-    return isOriginalAuthor || isAdmin;
-  },
-  { dispose: true },
-);
+    } catch (err) {
+      channel.send("Keqing cannot send emojis ;-;");
+      throw err;
+    }
 
-collector.on('collect', (reaction, user) => {
-  switch (reaction.emoji.name) {
-    // lock: admins only
-    case '🔒':
-      const isAdmin = message.guild.members.cache
-        .find((member) => member.id === user.id)
-        .hasPermission('MANAGE_MESSAGES');
+    const collector = reactionMessage.createReationCollector(
+      (reaction, user) => message.guild.members.cache.find((member) => member.id === user.id).hasPermission('ADMINISTRATOR'),
+      { dispose: true }
+      );
 
-      if (isAdmin) {
-        channel.updateOverwrite(message.author, {
-          SEND_MESSAGES: false,
-        });
-      } else {
-        // if not an admin, just remove the reaction
-        // like nothing's happened
-        reaction.users.remove(user);
+    collector.on('collect', (reaction, user) => {
+      switch (reaction.emoji.name){
+        case "🔒":
+          channel.updateOverwrite(message.author, { SEND_MESSAGES: false});
+          break;
+        case "⛔":
+          channel.send("Keqing will delete this channel in 5 seconds :)");
+          setTimeout(() => channel.delete(), 5000);
+          break;
       }
-      break;
-    // close: anyone i.e. any admin and the member
-    // created the ticket
-    case '⛔':
-      channel.send('Deleting this ticket in 5 seconds...');
-      setTimeout(() => channel.delete(), 5000);
-      break;
-  }
-});
+    });
+
+    message.channel.send(`I will be right with you :) ${channel}`).then((msg) => {
+      setTimeout(() => msg.delete(), 7000);
+      setTimeout(() => message.delete(), 3000);
+    }).catch((err) => {
+      throw err;
+    })
 	}
 }
+// symbol: 🔒, ⚠️, ⛔
