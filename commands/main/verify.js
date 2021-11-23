@@ -5,8 +5,8 @@ module.exports = {
 		if (message.member.roles.cache.has(member_role_id) && message.member.roles.cache.has(verify_role_id)) {
 			message.channel.send('You are verified already.').then(msg => {
 				setTimeout(() => {
-					message.delete()
-					msg.delete()
+					// message.delete()
+					// msg.delete()
 				}, 3000)
 			})
 		} else {
@@ -14,8 +14,8 @@ module.exports = {
 			message.member.roles.add(verify_role_id)
 			message.channel.send('You are now verified :)').then(msg => {
 				setTimeout(() => {
-					message.delete()
-					msg.delete()
+					// message.delete()
+					// msg.delete()
 				}, 3000)
 			})
 		}

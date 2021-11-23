@@ -1,5 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 module.exports = {
+  permissions: [622450109317251088],
 	async run (bot, message, args) {
 		message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
 		const embed1 = new MessageEmbed()

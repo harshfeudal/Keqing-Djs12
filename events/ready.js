@@ -1,9 +1,9 @@
 const { log, guild_id, channel_id, russia_emoji_name, russia_role_id, spanish_emoji_name, spanish_role_id, english_emoji_name, english_role_id, vietnam_emoji_name, vietnam_role_id } = require('../lib')
 module.exports = {
 	async run (bot) {
-		log(2, `[Bot] Logged in as ${bot.user.tag}!`)
+		log(2, `[Bot] Keqing is online: ${bot.user.tag}!`)
 
-		bot.user.setPresence({ activity: { name: 'I love Harshfeudal <3' }, status: 'dnd' });
+		bot.user.setPresence({ activity: { name: `Harshfeudal has wished me a happy birthday <3` }, status: 'dnd' });
 
 		const guild = await bot.guilds.fetch(guild_id)
 

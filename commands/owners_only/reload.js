@@ -1,10 +1,11 @@
 module.exports = {
+  permissions: [622450109317251088],
 	args: 1,
 	async run (bot, message, args) {
 		const command_name = args[0].toLowerCase()
 		const command = bot.commands.get(command_name) || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command_name))
 
-		if (!command) return message.channel.send('Unknown command!')
+		if (!command) return message.channel.send(`I don't know ;-;`)
 
 		delete require.cache[require.resolve(`../${command.group}/${command.name}.js`)]
 

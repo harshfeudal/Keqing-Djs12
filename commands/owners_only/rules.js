@@ -1,13 +1,17 @@
 const { MessageEmbed } = require('discord.js')
 module.exports = {
+  permissions: [622450109317251088],
 	async run (bot, message, args) {
-		message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118056537161748/HV7xOwu.gif')
 		const embed1 = new MessageEmbed()
 			.setColor('#85FFF2')
 			.setDescription(`**Welcome to Harshfeudal Discord server!**
 
 This is my YouTube channel:
 <:harshfeudal:848815852886949908> https://www.youtube.com/c/Harshfeudal
+My **second** Youtube channel:
+<:harshfeudal:848815852886949908> https://www.youtube.com/channel/UCnM88rgfYYaN65do-wvWr1w
+
+*(very glad if your guys can subscribe me both <:KeqingHeart_Milkman:883257327657041930>)*
 
 To be honest, this is the **Gaming community** server, where you can chat and share tips together, not only for Geometry Dash, but also Genshin Impact, Minecraft, and so on.
     
@@ -20,20 +24,12 @@ First of all, you need to verify your Discord account to make sure that you are 
 			.setDescription(`**———————————————**
 __**SERVER INFORMATION**__
 <:harshfeudal:848815852886949908> We have lots of channels and categories, and I will presented for you to know where and how these channels work. 
-
-<#850784210976505917> is the information channel about ranking up your role to get some great stuffs and facilities.
-    
-<#838697343251382284> , <#848798136200724490> , <#848798188688244746> and <#852271405172129792> are 4 main channels for you to chat about Geometry Dash.
-    
-<#858933891493265418> , <#859795442376114186> , <#859795540434485309> and <#859795570800590858> are 4 main channels for you to chat about Minecraft.
-    
-And so on!
     
 <#857280791649845248> is an announcement channel about Genshin Impact.
     
 <#847777776505192458> is the place where you want to send our members about your photos, or some source links. 
     
-<#851906813699031080> , <#851906902153625630> , <#851906942007115778> , <#851906990024032311> and <#865672934374244383> are the places where you can share some anime imagines. 
+<#851906813699031080> , <#851906902153625630> , and <#865672934374244383> are the places where you can share some anime imagines. 
     
 And so on!
     
@@ -47,18 +43,11 @@ In Collaboration Category: Read carefully the <#851888900091674684> and my reque
 			.setColor('#85FFF2')
 			.setDescription(`**———————————————**
 __**ADMIN INFORMATION:**__
-<@622450109317251088>: Owner
-    
-<@621844409901776910> and <@742757174895444024> : Co-Owner
-    
-<@642482771964592139>, <@804396521671229481>, <@771396049621352528> and <@729036388573511780> : Admins
-    
-<@464243876022976512> and <@716668405008171072> : Staffs
-    
-<@334461627225210880> , <@734090797611221083> : Developers
+<@!622450109317251088>: Main Owner
+<@!290154392538054657>: My second owner.
     
 This is my Discord server invitation
-https://discord.gg/WQ2sZK4Cwr
+https://discord.gg/R3QPeJgK9C
     
 Team contact email:
 *teamaddiction2021@gmail.com*`)
@@ -89,16 +78,14 @@ Team contact email:
 
 		const embed5 = new MessageEmbed()
 			.setColor('#85FFF2')
-			.setDescription(`**__Please note:__** To welcome this chat, type *k?verify* at <#863457112276336670> so as to have a role and unlock the channel!
+			.setDescription(`**__Please note:__** To welcome this chat, type *k?verify* at <#870507834209603624> so as to have a role and unlock the channel!
 
     **React your role without a game may cannot show your right channel for you to get in; react with the flag so as to go inside your correct general, so don't forget to react twice! General English may set as default if you neither react the flag nor the game.**`)
 
 		message.channel.send(embed1)
 		message.channel.send(embed2)
 		message.channel.send(embed3)
-		message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/860118371948167208/712e573d6c0d6e8db0c918c649b8fc88.png')
 		message.channel.send(embed4)
 		message.channel.send(embed5)
-		message.channel.send('https://cdn.discordapp.com/attachments/846427288232394822/865615154749898772/image0.gif')
 	}
 }

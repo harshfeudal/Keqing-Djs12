@@ -10,10 +10,14 @@ module.exports = {
 	english_role_id: '864888482106703923',
 	vietnam_emoji_name: '🇻🇳',
 	vietnam_role_id: '864791251455180801',
-	verify_role_id: '863443533000081418',
-	member_role_id: '846426312661925899',
-	mute_role_id: '863797707130273802',
+	verify_role_id: '900667592589582376',
+	member_role_id: '901845392147238984',
+	mute_role_id: '902514463486406677',
+  blind_role_id: '889666330746302514',
 	owners: ['379643682984296448', '622450109317251088'],
+  warn_1: '863681816804196353',
+  warn_2: '863682013445357589',
+  harshfeudal: ['622450109317251088'],
 	/**
    * @param {*} level 0: Error | 1: Warn | 2: Info
    * @param {*} message

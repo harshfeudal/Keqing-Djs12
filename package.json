@@ -1,7 +1,6 @@
 {
   "name": "keqing",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -27,6 +26,12 @@
     "quickmongo": "^3.0.2"
   },
   "devDependencies": {
+    "node": "^14.17.4",
     "standardx": "^7.0.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "description": ""
 }

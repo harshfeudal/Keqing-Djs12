@@ -47,7 +47,6 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.db, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
-	userFindAndModify: false
 }).then(()=>{
 	console.log(`Connected to Harshfeudal's Database!`);
 }).catch((err) => {
